@@ -8,7 +8,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:app": "ng build --configuration production --base-href=/test-load-button/",
+    "build:ci": "npm run build:app",
+    "test:app": "ng test --no-watch --browsers=ChromeHeadlessCI",
+    "test:ci": "npm run test:app"
   },
   "dependencies": {
     "@angular/animations": "^14.0.0",
