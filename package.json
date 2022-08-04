@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test --browsers=Chromium",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:app": "ng build --configuration production --base-href=/test-load-button/",
