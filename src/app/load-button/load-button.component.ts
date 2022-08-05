@@ -16,10 +16,7 @@ export class LoadButtonComponent {
     this.downloadLink
       .pipe(finalize(() => this.fileDownloaded = false))
       .subscribe({
-        next: (fileLink: FileInfo) => {
-          const newWindow = window.open();
-          newWindow.location = fileLink.link;
-        },
+        next: (fileLink: FileInfo) => window.location.assign(fileLink.link),
         error: () => alert('AUCTIONS.REPORTS.ERRORS.DOWNLOAD_FAILED'),
       });
   }
